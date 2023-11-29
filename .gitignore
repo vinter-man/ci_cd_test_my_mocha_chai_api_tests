@@ -1,0 +1,14 @@
+*.log
+*.csv
+*.tmp
+*.html
+
+.vscode
+.env*
+
+node_modules
+mochawesome-report
+temporary
+
+env.json
+package-lock.json

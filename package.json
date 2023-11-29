@@ -1,0 +1,38 @@
+{
+  "name": "test_repository",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Autotests to check the performance of backend",
+  "author": "s.vinterman",
+  "scripts": {
+    "coingecko": "mocha ./src/tests/coingecko/*.test.js --timeout 3000 --reporter mochawesome",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
+    "ci:check": "npm run prettier:check"
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "*.{js,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chai": "^4.3.7",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "deep-assign": "^3.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "k6": "^0.0.0",
+    "lodash": "^4.17.21",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3"
+  },
+  "license": "UNLICENSED"
+}
