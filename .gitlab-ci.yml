@@ -7,7 +7,7 @@ API tests:
   stage: test
   script:
     - npm install
-    - npm coingecko
+    - npm run coingecko
   after_script:
     # -
   artifacts:
