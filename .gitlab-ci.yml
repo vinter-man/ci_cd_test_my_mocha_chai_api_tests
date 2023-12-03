@@ -1,0 +1,18 @@
+image: node:latest
+
+stages:
+  - test
+
+API tests:
+  stage: test
+  script:
+    - npm install
+    - npm coingecko
+  after_script:
+    # -
+  artifacts:
+    when: always
+    paths:
+      - mochawesome-report/*
+    reports:
+      mochawesome: mochawesome-report/mochawesome.html
