@@ -14,5 +14,3 @@ API tests:
     when: always
     paths:
       - mochawesome-report/*
-    reports:
-      mochawesome: mochawesome-report/mochawesome.html
