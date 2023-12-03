@@ -5,7 +5,8 @@
   "description": "Autotests to check the performance of backend",
   "author": "s.vinterman",
   "scripts": {
-    "coingecko": "mocha ./src/tests/coingecko/*.test.js --timeout 3000 --reporter mochawesome",
+    "coingecko:mochawesome": "mocha ./src/tests/coingecko/*.test.js --timeout 3000 --reporter mochawesome",
+    "coingecko:junit": "mocha ./src/tests/coingecko/*.test.js --timeout 3000 --reporter mocha-junit-reporter",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "ci:check": "npm run prettier:check"
@@ -19,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.2",
     "chai": "^4.3.7",
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "lint-staged": "^13.1.0",
+    "mocha-junit-reporter": "^2.2.1",
     "prettier": "^2.8.3"
   },
   "license": "UNLICENSED"

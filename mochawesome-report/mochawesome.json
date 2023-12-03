@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-11-29T06:13:25.759Z",
-    "end": "2023-11-29T06:13:27.051Z",
-    "duration": 1292,
+    "start": "2023-12-03T18:31:09.491Z",
+    "end": "2023-12-03T18:31:10.622Z",
+    "duration": 1131,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5fda06a4-73bc-4f4e-b371-ea95c1704754",
+      "uuid": "428a56fa-e8f8-4125-90e7-1c28c44ff0b6",
       "title": "",
       "fullFile": "G:\\Утилиты\\Pytnon\\JS\\Betsy\\my_mocha_chai_api_tests\\src\\tests\\coingecko\\exchanges.test.js",
       "file": "\\src\\tests\\coingecko\\exchanges.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cc8b3d44-a668-4f0c-8563-339d43b8f7ab",
+          "uuid": "55fb33c3-b86a-479b-b523-d59c0caf792a",
           "title": "[COINGECKO][SUITE_1_0]: Exchanges",
           "fullFile": "G:\\Утилиты\\Pytnon\\JS\\Betsy\\my_mocha_chai_api_tests\\src\\tests\\coingecko\\exchanges.test.js",
           "file": "\\src\\tests\\coingecko\\exchanges.test.js",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "aad5c216-f198-4ff1-993e-55c36bd40226",
+              "uuid": "765b459d-a368-4f9d-82c8-4cd7808e6d89",
               "title": "Positive cases",
               "fullFile": "G:\\Утилиты\\Pytnon\\JS\\Betsy\\my_mocha_chai_api_tests\\src\\tests\\coingecko\\exchanges.test.js",
               "file": "\\src\\tests\\coingecko\\exchanges.test.js",
@@ -45,7 +45,7 @@
               "tests": [],
               "suites": [
                 {
-                  "uuid": "81e122cd-e54a-4522-9801-6cc89512726f",
+                  "uuid": "93825056-e553-441c-ac85-b180a33865e7",
                   "title": "Get 5 exchanges on 1 page",
                   "fullFile": "G:\\Утилиты\\Pytnon\\JS\\Betsy\\my_mocha_chai_api_tests\\src\\tests\\coingecko\\exchanges.test.js",
                   "file": "\\src\\tests\\coingecko\\exchanges.test.js",
@@ -54,7 +54,7 @@
                       "title": "\"before all\" hook in \"Get 5 exchanges on 1 page\"",
                       "fullTitle": "[COINGECKO][SUITE_1_0]: Exchanges Positive cases Get 5 exchanges on 1 page \"before all\" hook in \"Get 5 exchanges on 1 page\"",
                       "timedOut": false,
-                      "duration": 1283,
+                      "duration": 1124,
                       "state": null,
                       "speed": null,
                       "pass": false,
@@ -63,8 +63,8 @@
                       "context": null,
                       "code": "let exchanges = await coingecko.getExchanges({\n  requestConfig: {\n    params: {\n      per_page: EXCHANGES_COUNT,\n      page: PAGE_NUMBER,\n    },\n  },\n});\nTestExchanges = new ExchangesTestClass(exchanges);",
                       "err": {},
-                      "uuid": "1ddc7d70-bbfa-4d81-9d6d-969eacf796d9",
-                      "parentUUID": "81e122cd-e54a-4522-9801-6cc89512726f",
+                      "uuid": "a138bef1-c8a6-4d44-9e3d-b026aebdb90a",
+                      "parentUUID": "93825056-e553-441c-ac85-b180a33865e7",
                       "isHook": true,
                       "skipped": false
                     }
@@ -75,7 +75,7 @@
                       "title": "[TEST_1_0]: Request code is 200",
                       "fullTitle": "[COINGECKO][SUITE_1_0]: Exchanges Positive cases Get 5 exchanges on 1 page [TEST_1_0]: Request code is 200",
                       "timedOut": false,
-                      "duration": 2,
+                      "duration": 1,
                       "state": "passed",
                       "speed": "fast",
                       "pass": true,
@@ -84,8 +84,8 @@
                       "context": null,
                       "code": "TestExchanges.testCode();",
                       "err": {},
-                      "uuid": "e834fd77-a5ea-47b8-9e05-966d6c8c742b",
-                      "parentUUID": "81e122cd-e54a-4522-9801-6cc89512726f",
+                      "uuid": "5459f2c1-9d82-4458-9a6e-a8c1ab7d0b0d",
+                      "parentUUID": "93825056-e553-441c-ac85-b180a33865e7",
                       "isHook": false,
                       "skipped": false
                     },
@@ -102,21 +102,21 @@
                       "context": null,
                       "code": "TestExchanges.testLength();",
                       "err": {},
-                      "uuid": "f34a533f-e019-4b04-baf6-599223c3fdb1",
-                      "parentUUID": "81e122cd-e54a-4522-9801-6cc89512726f",
+                      "uuid": "3ecb9204-cc76-40fe-a87c-5021820a174b",
+                      "parentUUID": "93825056-e553-441c-ac85-b180a33865e7",
                       "isHook": false,
                       "skipped": false
                     }
                   ],
                   "suites": [],
                   "passes": [
-                    "e834fd77-a5ea-47b8-9e05-966d6c8c742b",
-                    "f34a533f-e019-4b04-baf6-599223c3fdb1"
+                    "5459f2c1-9d82-4458-9a6e-a8c1ab7d0b0d",
+                    "3ecb9204-cc76-40fe-a87c-5021820a174b"
                   ],
                   "failures": [],
                   "pending": [],
                   "skipped": [],
-                  "duration": 2,
+                  "duration": 1,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 3000

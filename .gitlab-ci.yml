@@ -7,10 +7,13 @@ API tests:
   stage: test
   script:
     - npm install
-    - npm run coingecko
+    - npm run coingecko:junit
+    - npm run coingecko:mochawesome
   after_script:
     # -
   artifacts:
     when: always
     paths:
       - mochawesome-report/*
+    reports:
+      junit: test-results.xml

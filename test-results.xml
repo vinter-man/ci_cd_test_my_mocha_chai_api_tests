@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.134" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-12-03T18:31:04" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="[COINGECKO][SUITE_1_0]: Exchanges" timestamp="2023-12-03T18:31:04" tests="0" file="G:\Утилиты\Pytnon\JS\Betsy\my_mocha_chai_api_tests\src\tests\coingecko\exchanges.test.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Positive cases" timestamp="2023-12-03T18:31:04" tests="0" file="G:\Утилиты\Pytnon\JS\Betsy\my_mocha_chai_api_tests\src\tests\coingecko\exchanges.test.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Get 5 exchanges on 1 page" timestamp="2023-12-03T18:31:04" tests="2" file="G:\Утилиты\Pytnon\JS\Betsy\my_mocha_chai_api_tests\src\tests\coingecko\exchanges.test.js" time="1.132" failures="0">
+    <testcase name="[COINGECKO][SUITE_1_0]: Exchanges Positive cases Get 5 exchanges on 1 page [TEST_1_0]: Request code is 200" time="0.001" classname="[TEST_1_0]: Request code is 200">
+    </testcase>
+    <testcase name="[COINGECKO][SUITE_1_0]: Exchanges Positive cases Get 5 exchanges on 1 page [TEST_1_1]: The answer contains 5 exchanges" time="0.001" classname="[TEST_1_1]: The answer contains 5 exchanges">
+    </testcase>
+  </testsuite>
+</testsuites>
