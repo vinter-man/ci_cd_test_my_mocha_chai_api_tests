@@ -8,5 +8,7 @@
 
 node_modules
 temporary
+mochawesome-report
+test-results.xml
 
 package-lock.json
