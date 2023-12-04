@@ -17,3 +17,4 @@ API tests:
       - mochawesome-report/*
     reports:
       junit: test-results.xml
+    expire_in: 1 week
