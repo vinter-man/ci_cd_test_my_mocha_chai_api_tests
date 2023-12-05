@@ -6,7 +6,8 @@
   "author": "s.vinterman",
   "scripts": {
     "coingecko:mochawesome": "mocha ./src/tests/coingecko/*.test.js --timeout 3000 --reporter mochawesome",
-    "coingecko:junit": "node coingecko-junit-test.js",
+    "coingecko:junit:config": "node coingecko-junit-test.js",
+    "coingecko:junit": "mocha ./src/tests/coingecko/*.test.js --timeout 3000 --reporter mocha-junit-reporter",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "ci:check": "npm run prettier:check"
