@@ -27,10 +27,6 @@ describe('[COINGECKO][SUITE_1_0]: Exchanges', () => {
         TestExchanges.testCode();
       });
 
-      it('Oh shit', function () {
-        expect('norm').equal('shit');
-      });
-
       it(`[TEST_1_1]: The answer contains ${EXCHANGES_COUNT} exchanges`, () => {
         TestExchanges.testLength();
       });
