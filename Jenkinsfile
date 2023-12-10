@@ -7,6 +7,7 @@ pipeline {
 
     environment {
         HOME = "${WORKSPACE}"
+        NPM_CONFIG_PREFIX = "${WORKSPACE}/.npm-global"
     }
 
     stages {
@@ -14,6 +15,7 @@ pipeline {
             steps {
                 script {
                     docker.image('node:latest').inside {
+                        sh 'npm config set prefix $NPM_CONFIG_PREFIX'
                         sh 'npm install'
                         sh 'npm run coingecko:mochawesome'
                         sh 'npm run coingecko:junit'
