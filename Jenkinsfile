@@ -5,8 +5,11 @@ pipeline {
         }
     }
 
+    // environment {
+    //     NPM_CONFIG_CACHE = "npm_config_cache"
+    // }
     environment {
-        NPM_CONFIG_CACHE = "npm_config_cache"
+        HOME = "${WORKSPACE}"
     }
 
     stages {
@@ -14,8 +17,9 @@ pipeline {
             steps {
                 script {
                     docker.image('node:latest').inside {
-                        sh 'mkdir ${NPM_CONFIG_CACHE} -p'
-                        sh 'npm install  --cache ${NPM_CONFIG_CACHE}'
+                        // sh 'mkdir ${NPM_CONFIG_CACHE} -p'
+                        // sh 'npm install  --cache ${NPM_CONFIG_CACHE}'
+                        sh 'npm install'
                         sh 'npm run coingecko:mochawesome'
                         sh 'npm run coingecko:junit'
                     }
