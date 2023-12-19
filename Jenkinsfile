@@ -1,21 +1,27 @@
 pipeline {
     agent {
-        dockerfile true
+        node {
+            label 'ubuntu-node'
+        }
+    }
+
+    environment {
+        HOME = "${WORKSPACE}"
+        NPM_CONFIG_PREFIX = "${WORKSPACE}/.npm-global"
     }
 
     stages {
         stage('API tests') {
             steps {
-                sh 'npm run coingecko:mochawesome'
-                sh 'npm run coingecko:junit'
+                script {
+                    docker.image('node:latest').inside {
+                        sh 'npm config set prefix $NPM_CONFIG_PREFIX'
+                        sh 'npm install'
+                        sh 'npm run coingecko:mochawesome'
+                        sh 'npm run coingecko:junit'
+                    }
+                }
             }
-        }
-    }
-
-    post {
-        always {
-            archiveArtifacts artifacts: 'mochawesome-report/*', fingerprint: true, onlyIfSuccessful: false
-            junit 'test-results.xml'
         }
     }
 }
