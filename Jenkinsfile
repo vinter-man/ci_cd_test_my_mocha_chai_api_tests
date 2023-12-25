@@ -27,8 +27,8 @@ pipeline {
                     docker.image('node:latest').inside {
                         sh "npm config set prefix $NPM_CONFIG_PREFIX"
                         sh 'npm install'
-                        sh 'npm run coingecko:mochawesome'
                         sh 'npm run coingecko:junit'
+                        sh 'npm run coingecko:mochawesome'
                     }
                 }
             }
