@@ -24,4 +24,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'mochawesome-report/*', fingerprint: true, onlyIfSuccessful: false
+            junit 'test-results.xml'
+        }
+    }
 }
